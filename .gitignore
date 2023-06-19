@@ -1,0 +1,9 @@
+build
+target
+.class
+out
+node_modules
+.gradle
+**/.idea
+**/*.jar
+.g8
