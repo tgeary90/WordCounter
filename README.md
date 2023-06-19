@@ -17,4 +17,11 @@ Small lib and play app to add words to a store and return their count
 1. The solution could be hosted in the cloud as a lambda in AWS or microservice in a kubernetes pod. Or simply as a service running on an EC2 instance. Similar form factors exist for GCP and Azure
 2. Resiliency would be achieved through hosting multiple instances of the service - either in a kubernetes pod or running load-balanced EC2 instances.
 
+## Testing
 
+sbt run &
+
+```
+tomg@tomdev:~$ curl -H "content-type: application/json"  -XPOST localhost:9000/wordcounter/ --data '{"value": "hello"}'
+{"word":"Added Word(hello): true"}tomg@tomdev:~$ 
+```

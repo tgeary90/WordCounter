@@ -5,7 +5,7 @@
 
 # An example controller showing a sample home page
 GET     /                          controllers.HomeController.index()
-POST    /wordcounter/:word         controllers.WordCounterController.add(word)
+POST    /wordcounter/              controllers.WordCounterController.add
 GET     /wordcounter/:word         controllers.WordCounterController.get(word)
 
 # Map static resources from the /public folder to the /assets URL path
