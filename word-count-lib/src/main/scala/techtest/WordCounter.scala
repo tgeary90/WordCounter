@@ -19,7 +19,7 @@ class WordCounter(translator: Translator) {
       true
     }
 
-    def safeAdd(word: Seq[String]): Boolean = {
+    def safeAdd(word: Seq[String], addWord: String => Boolean): Boolean = {
       if (word(0) == null || word(0).isEmpty) false else {
 
         val patt = "[^A-Za-z]".r
@@ -37,7 +37,7 @@ class WordCounter(translator: Translator) {
     }
 
      try {
-       safeAdd(word)
+       safeAdd(word, addWord)
      }
      catch {
        case e: RuntimeException => println(s"Could not add word $word"); false
