@@ -7,8 +7,8 @@ Small lib and play app to add words to a store and return their count
 
 ## Design Principles
 
-1. Use a data structure that supports fast store and fetch operations. ie. a map2. The design is modular. Operations were decomposed into functions and utilised using 2 abstraction layers. Add at layer 1, then addWord and safeAdd at the lower level. This provides for separation of concerns
-3. Dependency injection was used to support ease of testing. eg. The translater was injected as a mock
+1. Used a data structure that supports fast store and fetch operations. ie. a map. The design is modular. Operations were decomposed into functions and utilised using 2 abstraction layers. Add at layer 1, then addWord and safeAdd at the lower level. This provides for extensibility and readability
+3. Dependency injection was used to support ease of testing. eg. The Translater was injected as a mock
 4. memory usage should be small. Each instance of the word was not stored, only an incremental count
 5. The word count domain (WordCounter library) is agnostic of its execution environment (play framework). This is an instance of an onion style architecture. Core domain with access layer on the outside.
 
