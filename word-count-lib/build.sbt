@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
-      organization := "com.example",
+      organization := "techtest",
       scalaVersion := "2.12.14"
     )),
     name := "WordCounter"
